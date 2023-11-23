@@ -3,6 +3,18 @@ const yargs = require('yargs')
 //Create command add
 yargs.command({
     command:'add',
+    builder:{
+        title:{
+            describe: 'title of the note',
+            demandOption: true,
+            type: 'string'
+        },
+        body:{
+            describe:'description of a note',
+            demandOption:true,
+            type: 'string'
+        }
+    },
     describe:'add a new note',
     handler: function(){
         console.log('adding a note');
