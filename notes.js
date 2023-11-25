@@ -52,9 +52,21 @@ const listNotes = function(){
     }
 }
 
+
+const readNotes = function(title){
+    const notes = loadNotes()
+
+    for (const note of notes) {
+        if (note.title === title){
+            console.log(note.body);
+        }
+    }
+}
+
 module.exports = {
     getNotes: getNotes,
     addNotes: addNotes,
     removeNotes: removeNotes,
-    listNotes: listNotes
+    listNotes: listNotes,
+    readNotes : readNotes
 }
