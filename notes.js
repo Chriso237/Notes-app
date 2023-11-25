@@ -33,7 +33,7 @@ const loadNotes = function(){ //load the notes
    
 }
 
-const removeNotes = function(title){
+const removeNotes = function(title){ //remove a note
     const notes = loadNotes()
 
     const index = notes.indexOf(title)
@@ -44,7 +44,7 @@ const removeNotes = function(title){
 }
 
 
-const listNotes = function(){
+const listNotes = function(){ //list the note
     const notes = loadNotes()
 
     for (const note of notes) {
@@ -53,7 +53,7 @@ const listNotes = function(){
 }
 
 
-const readNotes = function(title){
+const readNotes = function(title){ // read individual notes
     const notes = loadNotes()
 
     for (const note of notes) {
