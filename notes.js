@@ -47,7 +47,9 @@ const removeNotes = function(title){
 const listNotes = function(){
     const notes = loadNotes()
 
-    console.log(notes)
+    for (const note of notes) {
+        console.log(note)
+    }
 }
 
 module.exports = {
