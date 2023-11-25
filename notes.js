@@ -33,8 +33,19 @@ const loadNotes = function(){ //load the notes
    
 }
 
+const removeNotes = function(title){
+    const notes = loadNotes()
+
+    const index = notes.indexOf(title)
+
+    notes.splice(index, 1)
+
+    saveNotes(notes)
+}
+
 
 module.exports = {
     getNotes: getNotes,
     addNotes: addNotes,
+    removeNotes: removeNotes
 }
